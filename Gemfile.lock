@@ -60,6 +60,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.1.0.0)
       execjs
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
@@ -82,6 +83,12 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    devise (4.7.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.14.2)
@@ -125,6 +132,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.0-x86-mingw32)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.2.3)
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
@@ -172,6 +180,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.8.2)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -210,6 +221,8 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2020.6)
       tzinfo (>= 1.0.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -244,6 +257,7 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara (>= 2.15)
+  devise
   hirb
   jbuilder (~> 2.7)
   listen (~> 3.2)
