@@ -1,5 +1,19 @@
 @import "bootstrap/scss/bootstrap";
 
-nav{
-  background-color: #3778c2
+@font-face {
+  font-family: 'Proxima_Nova_Bold';
+  src: url('Proxima_Nova_Bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima_Nova_Light';
+  src: url('Proxima_Nova_Light.otf');
+}
+
+body {
+  font-family: 'Proxima_Nova_Light'
+}
+
+nav {
+  background-color: #3778c2;
 }
