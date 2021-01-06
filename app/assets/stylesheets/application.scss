@@ -12,28 +12,25 @@
 
 html,
 body {
-  height: 100%;
-  font-family: 'Proxima_Nova_Light'
-}
-
-#page-content {
-  flex: 1 0 auto;
+  // height: 100%;
+  font-family: 'Proxima_Nova_Light';
   background-color: lightgray;
+  position: relative;
+  min-height: 100vh;
 }
 
 footer {
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
+  height: 4.5rem;
 }
-
 // ----------------
 
 nav {
   background-color: #3778c2;
 }
 
-footer {
-  background-color: black;
+.container{
+  padding-bottom: 4.5rem;
 }
