@@ -61,6 +61,7 @@ GEM
     autoprefixer-rails (10.1.0.0)
       execjs
     bcrypt (3.1.16)
+    bcrypt (3.1.16-java)
     bindex (0.8.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
@@ -89,6 +90,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.14.2)
@@ -258,6 +260,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  devise-bootstrap-views (~> 1.0)
   hirb
   jbuilder (~> 2.7)
   listen (~> 3.2)

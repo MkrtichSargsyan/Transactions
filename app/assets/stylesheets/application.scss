@@ -10,10 +10,30 @@
   src: url('Proxima_Nova_Light.otf');
 }
 
+html,
 body {
+  height: 100%;
   font-family: 'Proxima_Nova_Light'
 }
 
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgray;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+// ----------------
+
 nav {
   background-color: #3778c2;
+}
+
+footer {
+  background-color: black;
 }
