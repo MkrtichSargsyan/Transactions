@@ -13,6 +13,7 @@ class TransactionsController < ApplicationController
   def create
     @transaction = current_user.transactions.build(transaction_params)
     if @transaction.save
+      @transaction.transaction_groups.create(show_group_id)
       redirect_to user_transaction_path(current_user, @transaction), notice: 'You successfully created a new transaction.'
     else
       render 'new'
@@ -29,5 +30,9 @@ class TransactionsController < ApplicationController
 
   def transaction_params
     params.require(:transaction).permit(:name, :amount)
+  end
+
+  def show_group_id
+    params.require(:transaction).permit(:group_id)
   end
 end

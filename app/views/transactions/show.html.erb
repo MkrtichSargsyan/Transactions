@@ -9,5 +9,6 @@
       <h5 class="card-title">Amount: <span class='font-italic h4'><%= @transaction.amount %></span></h5>
       <h5 class="card-text">Created by: <span class='font-italic h4'><%= @transaction.author.name %></span></h5>
       <p>Date: <span class='font-italic'><%= @transaction.created_at.to_formatted_s(:long)  %></span></p>
+      <%= @transaction.groups.first.name %>
   </div>
 </section>
