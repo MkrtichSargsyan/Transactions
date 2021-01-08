@@ -1,0 +1,7 @@
+<section class='d-flex align-items-center flex-column mt-3'>
+  <%= image_tag 'user.png',class:'user_icon' %>
+  <h1><%= current_user.name %></h1>
+  <%= link_to 'All my transactions', user_transactions_path(current_user) %>
+  <%= link_to 'All my external transactions', root_path %>
+  <%= link_to 'All groups', root_path %>
+</section>

@@ -10,6 +10,14 @@
   src: url('Proxima_Nova_Light.otf');
 }
 
+.nova_light{
+  font-family: Proxima_Nova_Light;
+}
+
+.nova_bol{
+  font-family: Proxima_Nova_Bold;
+}
+
 html,
 body {
   // height: 100%;
@@ -29,8 +37,29 @@ footer {
 
 nav {
   background-color: #3778c2;
+
+  a{
+    color: white;
+  }
 }
 
 .container{
   padding-bottom: 4.5rem;
+}
+
+// user page
+
+.user_icon{
+  width: 150px;
+}
+
+.group_icon{
+  width: 100px;
+  height: 100px;
+}
+
+// transaction page
+
+.transaction_title{
+  font-family: Proxima_Nova_Bold;
 }

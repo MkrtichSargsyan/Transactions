@@ -3,7 +3,7 @@ module ApplicationHelper
     if signed_in?
       "<li class='nav-item'>
         <div class='nav-link text-white'>
-          Logged in as [ <strong  >#{link_to current_user.name, user_path(current_user)} </strong>]
+          Logged in as <strong>#{link_to current_user.name, user_path(current_user)} </strong>
         </div>
       </li>
       <li class='nav-item'>
@@ -16,5 +16,3 @@ module ApplicationHelper
     end
   end
 end
-
-
