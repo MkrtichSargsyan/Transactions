@@ -1,3 +1,15 @@
+<% if !@transaction.errors.empty?%>
+  <ul class='alert alert-danger px-5'>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <% @transaction.errors.full_messages.each do |msg|%>
+      <li>
+        <%= msg %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 <%= form_with model: @transaction, url: user_transaction_path,class:'col-md-8 mx-md-auto mt-4',local: true do |f| %>
   <div class="form-group">
     <%= f.label :name, "Name:", class: "col-md-4 control-label" %>
