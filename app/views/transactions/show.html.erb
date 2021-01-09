@@ -1,14 +1,13 @@
 <section class='d-flex align-items-center flex-column mt-3'>
   <p class="text-primary h1 font-weight-bold">Details</p>
-  <div class="shadow card rounded mt-3 pt-4" style="width: 18rem;">
+  <div class="transaction_card shadow card rounded mt-3 p-4" >
     <div class='d-flex justify-content-center align-items-center'>
-      <%= image_tag 'user.png',class:'group_icon card-img-top mr-3' %>
+      <%= image_tag "group_images/#{@transaction.groups.first.icon}" ,class:'group_icon card-img-top mr-3' %>
       <span class="transaction_title card-title h3 font-italic text-secondary"><%= @transaction.name %></span>
     </div>
     <div class="card-body">
       <h5 class="card-title">Amount: <span class='font-italic h4'><%= @transaction.amount %></span></h5>
       <h5 class="card-text">Created by: <span class='font-italic h4'><%= @transaction.author.name %></span></h5>
       <p>Date: <span class='font-italic'><%= @transaction.created_at.to_formatted_s(:long)  %></span></p>
-      <%= @transaction.groups.first.name %>
   </div>
 </section>

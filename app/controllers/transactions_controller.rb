@@ -7,7 +7,6 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
-    @groups = [1, 2, 3]
   end
 
   def create
