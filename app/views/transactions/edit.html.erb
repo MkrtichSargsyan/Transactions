@@ -1,0 +1,21 @@
+<%= form_with model: @transaction, url: user_transaction_path,class:'col-md-8 mx-md-auto mt-4',local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Name:", class: "col-md-4 control-label" %>
+    <div class="col">
+      <%= f.text_field :name,autofocus: true, placeholder: 'Transaction name', class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :amount, "Amount:", class: "col-md-4 control-label" %>
+    <div class="col">
+      <%= f.text_field :amount,autofocus: true, placeholder: 'Transaction amount', class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :group, "Select group:", class: "col-md-4 control-label" %>
+    <div class="col">
+      <%= f.select :group_id, Group.all.map{|group| [group.name,group.id]}, { include_blank: true },class:'input-group form-control' %>
+    </div>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-default btn-primary ml-3" %>
+<% end %>

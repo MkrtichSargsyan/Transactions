@@ -1,8 +1,9 @@
 class TransactionsController < ApplicationController
-  before_action :set_transaction, only: [:show]
+  before_action :set_transaction, only: %i[show edit update destroy]
 
   def index
     @transactions = current_user.transactions
+    @total_amount = @transactions.reduce(0) { |sum, cur| sum + cur.amount }
   end
 
   def new
@@ -19,7 +20,18 @@ class TransactionsController < ApplicationController
     end
   end
 
-  def show; end
+  def update
+    if @transaction.update(transaction_params)
+      redirect_to user_transaction_path, notice: 'Transaction updated'
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @transaction.destroy
+    redirect_to user_transactions_path, notice: 'Transaction deleted'
+  end
 
   private
 

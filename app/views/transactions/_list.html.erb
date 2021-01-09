@@ -1,7 +1,14 @@
-<div>
-  <% @transactions.each do |transaction| %>
-      <div>
-        <%= transaction.name %>
+<% @transactions.each do |transaction| %>
+    <%= link_to user_transaction_path(current_user, transaction),class:'w-100 transaction_link text-secondary' do %>
+      <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
+        <%= image_tag "group_images/#{transaction.groups.first.icon}" ,class:'transaction_icon card-img-top mr-3 border rounded' %>
+        <div class='w-100'>
+          <div class='d-flex justify-content-between mb-2'>
+            <span><%= transaction.name %></span>
+            <span class='font-weight-bold pr-3'>$ <%= transaction.amount %></span>
+          </div>
+          <%= transaction.created_at.to_formatted_s(:long)  %>
+        </div>
       </div>
-  <% end %>
-</div>
+    <% end %>
+<% end %>

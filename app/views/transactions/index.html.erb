@@ -1,2 +1,7 @@
-<%= link_to 'Add new transaction', new_user_transaction_path %>
-<%= render 'transactions/list' %>
+<section class='d-flex align-items-center flex-column mt-3'>
+  <div class='w-100 bg-light rounded p-3 mb-3'>
+    <p class='mb-2 h5 nova_bold text-secondary'>TOTAL PAYMENTS $<%= @total_amount %> </p>
+    <%= link_to 'Create new transaction', new_user_transaction_path,class:'btn btn-default btn-primary' %>
+  </div>
+  <%= render 'transactions/list' %>
+</section>
