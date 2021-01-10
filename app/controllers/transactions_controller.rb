@@ -26,6 +26,13 @@ class TransactionsController < ApplicationController
 
   def update
     if @transaction.update(transaction_params)
+      if show_group_id[:group_id]
+        if @transaction.groups.empty?
+          @transaction.transaction_groups.create(show_group_id)
+        else
+          @transaction.transaction_groups.update(show_group_id)
+        end
+      end
       redirect_to user_transaction_path, notice: 'Transaction updated'
     else
       render 'edit'

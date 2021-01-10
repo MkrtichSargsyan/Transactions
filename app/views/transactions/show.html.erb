@@ -2,7 +2,7 @@
   <p class="text-primary h1 font-weight-bold">Details</p>
   <div class="transaction_card shadow card rounded mt-3 p-4" >
     <div class='d-flex justify-content-center align-items-center'>
-      <%= image_tag "group_images/#{@transaction.groups.first.icon}" ,class:'group_icon card-img-top mr-3' %>
+    <%= show_transaction_icon(@transaction,'group_icon card-img-top mr-3') %>
       <span class="transaction_title card-title h3 font-italic text-secondary"><%= @transaction.name %></span>
     </div>
     <div class="card-body">
