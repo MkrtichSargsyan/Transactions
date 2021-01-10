@@ -1,0 +1,22 @@
+<section class='d-flex align-items-center flex-column mt-3'>
+  <div class="transaction_card rounded mt-2" >
+    <div class='d-flex justify-content-center align-items-center border-bottom border-dark pb-2 mb-5'>
+      <%= image_tag "group_images/#{@group.icon}", class: 'group_icon card-img-top mr-3 border rounded rounded-circle' %>
+      <span class="transaction_title card-title h4 font-italic text-secondary"><%= @group.name %></span>
+    </div>
+
+    <% @group.transactions.each do |transaction| %>
+      <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
+        <div class='w-100'>
+          <div class='d-flex justify-content-between mb-2'>
+            <span class='h4'><%= transaction.name %></span>
+            <span class='font-weight-bold pr-3'>$ <%= transaction.amount %></span>
+          </div>
+          <p class="m-0">Created by: <span class='font-italic'><%= transaction.author.name %></span></p>
+          <%= transaction.created_at.to_formatted_s(:long)  %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</section>
