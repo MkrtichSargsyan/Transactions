@@ -15,5 +15,12 @@ module ApplicationHelper
       </li>".html_safe
     end
   end
-end
 
+  def show_transaction_icon(transaction)
+    if transaction.groups.empty?
+      image_tag "group_images/empty.png", class: 'transaction_icon card-img-top mr-3 border rounded'
+    else
+      image_tag "group_images/#{transaction.groups.first.icon}", class: 'transaction_icon card-img-top mr-3 border rounded'
+    end
+  end
+end
