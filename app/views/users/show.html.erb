@@ -1,7 +1,18 @@
 <section class='d-flex align-items-center flex-column mt-3'>
   <%= image_tag 'user.png',class:'user_icon' %>
   <h1><%= current_user.name %></h1>
-  <%= link_to 'All my transactions', user_transactions_path(current_user,icon:true) %>
-  <%= link_to 'All my external transactions', user_transactions_path(current_user) %>
-  <%= link_to 'All groups', root_path %>
+  <div>
+    <div class='d-flex align-items-center mb-2'>
+      <%= image_tag 'transaction_icons/tr.png',class:'payment_icon rounded-circle mr-2' %>
+      <%= link_to 'All my transactions', user_transactions_path(current_user,icon:true), class:'h5 m-0 border-bottom border-dark pb-1' %>
+    </div>
+    <div class='d-flex align-items-center mb-2'>
+      <%= image_tag 'transaction_icons/i4.jpg',class:'payment_icon rounded-circle mr-2' %>
+      <%= link_to 'All my external transactions', user_transactions_path(current_user), class:'h5 m-0 border-bottom border-dark pb-1' %>
+    </div>
+    <div class='d-flex align-items-center mb-2'>
+      <%= image_tag 'transaction_icons/i6.webp',class:'payment_icon rounded-circle mr-2' %>
+      <%= link_to 'All groups',user_transactions_path(current_user), class:'h5 m-0 border-bottom border-dark pb-1' %>
+    </div>
+  </div>
 </section>
