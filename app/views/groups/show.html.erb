@@ -1,9 +1,16 @@
 <section class='d-flex align-items-center flex-column mt-3'>
   <div class="transaction_card rounded mt-2" >
-    <div class='d-flex justify-content-center align-items-center border-bottom border-dark pb-2 mb-5'>
+    <div class='d-flex justify-content-center align-items-center border-bottom border-dark pb-2 mb-1'>
       <%= image_tag "group_images/#{@group.icon}", class: 'group_icon card-img-top mr-3 border rounded rounded-circle' %>
       <span class="transaction_title card-title h4 font-italic text-secondary"><%= @group.name %></span>
     </div>
+     <div class='mb-4'>
+        <%= link_to edit_group_path(@group) do %>
+          <button class="btn btn-secondary">
+            Edit Group
+          </button>
+        <% end %>
+      </div>
 
     <% @group.transactions.each do |transaction| %>
       <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
