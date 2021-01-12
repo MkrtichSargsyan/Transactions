@@ -1,0 +1,13 @@
+<section class='d-flex align-items-center flex-column mt-3'>
+  <div class='w-100 bg-light rounded p-3 mb-3'>
+    <%= link_to 'Create new group', new_group_path,class:'btn btn-default btn-primary' %>
+  </div>
+  <% @groups.each do |group| %>
+    <%= link_to group_path(group),class:'w-100 transaction_link text-secondary' do %>
+      <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
+        <%= image_tag group.icon, class: 'transaction_icon card-img-top mr-3 border rounded' %>
+        <%= group.name %>
+      </div>
+    <% end %>
+  <% end %>
+</section>
