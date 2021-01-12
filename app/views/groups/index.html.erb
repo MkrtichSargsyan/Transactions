@@ -5,7 +5,7 @@
   <% @groups.each do |group| %>
     <%= link_to group_path(group),class:'w-100 transaction_link text-secondary' do %>
       <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
-        <%= image_tag "group_images/#{group.icon}", class: 'transaction_icon card-img-top mr-3 border rounded' %>
+        <%= image_tag group.icon, class: 'transaction_icon card-img-top mr-3 border rounded' %>
         <%= group.name %>
       </div>
     <% end %>

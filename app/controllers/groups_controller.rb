@@ -31,4 +31,8 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon)
   end
+  
+  def group_icon
+    params.require(:group).permit(:icon)
+  end
 end
