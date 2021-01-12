@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
 
   def index
-    @groups = Group.all.sorted_ASK
+    @groups = Group.all.includes(:user).sorted_ASK
   end
 
   def new
@@ -22,7 +22,6 @@ class GroupsController < ApplicationController
 
   def update
     if @group.update(group_params)
-      # byebug
       redirect_to groups_path
     else
       render 'edit'

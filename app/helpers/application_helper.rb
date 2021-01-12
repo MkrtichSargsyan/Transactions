@@ -20,7 +20,7 @@ module ApplicationHelper
     if transaction.groups.empty?
       image_tag 'group_images/empty.png', class: 'transaction_icon card-img-top mr-3 border rounded'
     else
-      image_tag "group_images/#{transaction.groups.first.icon}", class: class_names
+      image_tag transaction.groups.first.icon, class: class_names
     end
   end
 end

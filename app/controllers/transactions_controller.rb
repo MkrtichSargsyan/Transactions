@@ -3,9 +3,9 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = if params[:icon]
-                      current_user.transactions.ordered_desc
+                      current_user.transactions.includes(:groups).ordered_desc
                     else
-                      current_user.transactions.ordered_desc.select { |tr| tr.groups.empty? }
+                      current_user.transactions.includes(:groups).ordered_desc.select { |tr| tr.groups.empty? }
                     end
     @total_amount = @transactions.reduce(0) { |sum, cur| sum + cur.amount }
   end
