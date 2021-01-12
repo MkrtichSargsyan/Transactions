@@ -7,4 +7,6 @@ class Transaction < ApplicationRecord
   has_many :groups, through: :transaction_groups
 
   scope :ordered_desc, -> { order(created_at: :desc) }
+  scope :most_expensive_transaction, -> { where(amount: maximum(:amount)) }
+  scope :most_cheapest_transaction, -> { where(amount: minimum(:amount)) }
 end
