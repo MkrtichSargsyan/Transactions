@@ -1,7 +1,7 @@
 <section class='d-flex align-items-center flex-column mt-3'>
   <div class="transaction_card rounded mt-2" >
     <div class='d-flex justify-content-center align-items-center border-bottom border-dark pb-2 mb-1'>
-      <%= image_tag "group_images/#{@group.icon}", class: 'group_icon card-img-top mr-3 border rounded rounded-circle' %>
+      <%= image_tag @group.icon, class: 'group_icon card-img-top mr-3 border rounded rounded-circle' %>
       <span class="transaction_title card-title h4 font-italic text-secondary"><%= @group.name %></span>
     </div>
      <div class='mb-4'>
