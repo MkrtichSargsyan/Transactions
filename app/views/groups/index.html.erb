@@ -7,6 +7,7 @@
       <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
         <%= image_tag group.icon, class: 'transaction_icon card-img-top mr-3 border rounded' %>
         <%= group.name %>
+        <p class="m-0 flex-grow-1 d-flex justify-content-end">Created by: <span class='font-italic'><%= group.user.name %></span></p>
       </div>
     <% end %>
   <% end %>
