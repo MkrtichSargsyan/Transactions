@@ -17,14 +17,6 @@
   </div>
 
   <div class=' d-flex'>
-    <div class='mr-5 d-flex flex-column align-items-center'>
-      <p class='font-weight-bold'>Expensivest</p>
-       <%= link_to @most_expensive_transaction.name, user_transaction_path(current_user,@most_expensive_transaction) %>
-    </div>
-    <div class='d-flex flex-column align-items-center'>
-      <p class='font-weight-bold'>Cheapest</p>
-       <%= link_to @most_cheapest_transaction.name, user_transaction_path(current_user,@most_cheapest_transaction) %>
-    </div>
-  </div>
+   <%= show_cheapest_and_expensivest %>
 </section>
 

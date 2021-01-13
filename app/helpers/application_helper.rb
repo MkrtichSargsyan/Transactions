@@ -16,11 +16,24 @@ module ApplicationHelper
     end
   end
 
-  def show_transaction_icon(transaction,class_names)
+  def show_transaction_icon(transaction, class_names)
     if transaction.groups.empty?
       image_tag 'group_images/empty.png', class: 'transaction_icon card-img-top mr-3 border rounded'
     else
       image_tag transaction.groups.first.icon, class: class_names
+    end
+  end
+
+  def show_cheapest_and_expensivest
+    unless current_user.transactions.empty?
+      "<div class='mr-5 d-flex flex-column align-items-center'>
+         <p class='font-weight-bold'>Expensivest</p>
+         #{link_to @most_expensive_transaction.name, user_transaction_path(current_user, @most_expensive_transaction)}
+      </div>
+      <div class='d-flex flex-column align-items-center'>
+         <p class='font-weight-bold'>Cheapest</p>
+         #{link_to @most_cheapest_transaction.name, user_transaction_path(current_user, @most_cheapest_transaction)}
+      </div>".html_safe
     end
   end
 end
