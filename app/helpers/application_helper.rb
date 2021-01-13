@@ -16,11 +16,7 @@ module ApplicationHelper
     end
   end
 
-<<<<<<< HEAD
   def show_transaction_icon(transaction, class_names)
-=======
-  def show_transaction_icon(transaction,class_names)
->>>>>>> c9941f247b8ea4728bf8d6dfa29ce84581ced0af
     if transaction.groups.empty?
       image_tag 'group_images/empty.png', class: 'transaction_icon card-img-top mr-3 border rounded'
     else
