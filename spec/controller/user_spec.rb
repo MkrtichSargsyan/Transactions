@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'User controller', type: :request do
@@ -18,7 +20,5 @@ RSpec.describe 'User controller', type: :request do
     it 'should show most cheapest transaction' do
       expect(user1.transactions.most_cheapest_transaction[0] == transaction2)
     end
-
   end
- 
 end

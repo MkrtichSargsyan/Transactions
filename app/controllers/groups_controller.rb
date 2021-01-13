@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
 
@@ -37,7 +39,7 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon)
   end
-  
+
   def group_icon
     params.require(:group).permit(:icon)
   end

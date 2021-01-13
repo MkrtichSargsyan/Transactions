@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Transaction, type: :model do
@@ -27,5 +29,4 @@ RSpec.describe Transaction, type: :model do
   it 'check correct association between user and transaction' do
     user.transactions.should include(transaction)
   end
-  
 end

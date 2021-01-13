@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Transaction < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :amount, presence: true

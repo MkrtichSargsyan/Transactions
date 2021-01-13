@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[show edit update destroy]
 
@@ -41,7 +43,7 @@ class TransactionsController < ApplicationController
 
   def destroy
     @transaction.destroy
-    redirect_to user_transactions_path(icon:true), notice: 'Transaction deleted'
+    redirect_to user_transactions_path(icon: true), notice: 'Transaction deleted'
   end
 
   private
