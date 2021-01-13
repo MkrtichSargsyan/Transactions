@@ -3,8 +3,9 @@
 The project is based on an app for grouping payments. Users can create, edit and delete transactions and group them 
 
 ## Desktop
-![screenshot](https://github.com/RICKCOYL/embeded-images-and-videos/blob/hompage/screencapture-file-C-Users-Hp-Documents-Microverse-full-time-course-embeded-images-and-videos-index-html-2020-07-09-16_08_49.png)
+![screenshot](![s1](https://user-images.githubusercontent.com/31889642/104513068-8372d480-5608-11eb-8cf1-52af8f396558.png))
 
+![screenshot](![s2](https://user-images.githubusercontent.com/31889642/104513085-866dc500-5608-11eb-89a2-be4d30c981ff.png)))
 ## Built With
 
 - ruby '2.7.0'
@@ -26,12 +27,17 @@ To get a local copy up and running follow these simple example steps.
 Instal gems with:
 
 ```
+yarn install
+```
+
+```
 bundle install
 ```
 
 Setup database with:
 
 ```
+   rails db:drop
    rails db:create
    rails db:migrate
 ```
