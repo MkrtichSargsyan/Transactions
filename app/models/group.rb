@@ -5,7 +5,7 @@ class Group < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 25 }
 
-  belo  ngs_to :user
+  belongs_to :user
   has_many :transaction_groups, dependent: :destroy
   has_many :transactions, through: :transaction_groups, source: :transfer
 
