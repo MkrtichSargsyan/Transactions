@@ -13,6 +13,10 @@ The project is based on an app for grouping payments. Users can create, edit and
 - VScode
 - Bootstrap
 
+## Watch a video presentation of the project 
+
+[watch loom video](https://www.loom.com/share/6ad2873a06314e88943e376f05b392e0).
+
 ## Live Demo
 
 <a href= "https://transactions-01.herokuapp.com/" target="_blank">Live version</a>
