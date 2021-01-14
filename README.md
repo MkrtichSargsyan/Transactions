@@ -3,8 +3,11 @@
 The project is based on an app for grouping payments. Users can create, edit and delete transactions and group them 
 
 ## Desktop
-![s1](https://user-images.githubusercontent.com/31889642/104513068-8372d480-5608-11eb-8cf1-52af8f396558.png)
-![s2](https://user-images.githubusercontent.com/31889642/104513085-866dc500-5608-11eb-89a2-be4d30c981ff.png)
+
+  <div style='display:flex'>
+    ![s1](https://user-images.githubusercontent.com/31889642/104513068-8372d480-5608-11eb-8cf1-52af8f396558.png)
+    ![s2](https://user-images.githubusercontent.com/31889642/104513085-866dc500-5608-11eb-89a2-be4d30c981ff.png)
+  </div>
 ## Built With
 
 - ruby '2.7.0'
@@ -90,7 +93,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-  Design idea by Gregoire Vella(https://www.behance.net/gregoirevella)
+  Design idea by [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 - <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
 - <a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a>
