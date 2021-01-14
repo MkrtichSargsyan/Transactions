@@ -1,6 +1,6 @@
 # Group our transactions
 
-The project is based on an app for grouping payments. Users can create, edit and delete transactions and group them 
+The project is an app made specially for mobiles. Users can create, edit and delete transactions and group them 
 
 ## Desktop
 
