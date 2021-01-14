@@ -4,10 +4,8 @@ The project is based on an app for grouping payments. Users can create, edit and
 
 ## Desktop
 
-  <div style='display:flex'>
-    ![s1](https://user-images.githubusercontent.com/31889642/104513068-8372d480-5608-11eb-8cf1-52af8f396558.png)
-    ![s2](https://user-images.githubusercontent.com/31889642/104513085-866dc500-5608-11eb-89a2-be4d30c981ff.png)
-  </div>
+  ![s3](https://user-images.githubusercontent.com/31889642/104623958-64c61980-56ac-11eb-85e2-3df2eedec095.png)
+  
 ## Built With
 
 - ruby '2.7.0'
