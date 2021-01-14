@@ -83,7 +83,6 @@ Feel free to check the <a href="https://github.com/RICKCOYL/embeded-images-and-v
 
 ## Acknowledgment:
 
-Design idea by Gregoire Vella
 
 ## Show your support
 
@@ -91,8 +90,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- <a href="https://www.w3schools.com/" target="_blank">w3schools.com</a> 
+  Design idea by Gregoire Vella(https://www.behance.net/gregoirevella)
+
 - <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
 - <a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a>
-- <a href="https://css-tricks.com/" target="_blank">CSS-TRICKS</a>
 - <a href="https://youtube.com/" target="_blank">YouTube player page</a>
