@@ -4,11 +4,10 @@ class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[show edit update destroy]
 
   def index
-    @transactions = if params[:icon]
-                      current_user.transactions.includes(:groups).ordered_desc
-                    else
-                      current_user.transactions.includes(:groups).ordered_desc.select { |tr| tr.groups.empty? }
-                    end
+    temp_var = current_user.transactions.includes(:groups).ordered_desc
+    @transactions = temp_var
+    @transactions = temp_var.select { |tr| tr.groups.empty? } unless params[:icon]
+
     @total_amount = @transactions.reduce(0) { |sum, cur| sum + cur.amount }
   end
 
