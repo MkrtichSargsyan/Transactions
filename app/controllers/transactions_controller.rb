@@ -41,8 +41,11 @@ class TransactionsController < ApplicationController
   end
 
   def destroy
-    @transaction.destroy
-    redirect_to user_transactions_path(icon: true), notice: 'Transaction deleted'
+    if @transaction.destroy
+      redirect_to user_transactions_path(icon: true), notice: 'Transaction deleted'
+    else
+      redirect_to root_path
+    end
   end
 
   private
