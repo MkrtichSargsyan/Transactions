@@ -1,22 +1,21 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+*= require bootstrap
+*= require_tree .
+*= require_self
+ */
+
 @import "bootstrap/scss/bootstrap";
-
-@font-face {
-  font-family: 'Proxima_Nova_Bold';
-  src: url('Proxima_Nova_Bold.otf');
-}
-
-@font-face {
-  font-family: 'Proxima_Nova_Light';
-  src: url('Proxima_Nova_Light.otf');
-}
-
-.nova_light {
-  font-family: Proxima_Nova_Light, Arial, Helvetica, sans-serif;
-}
-
-.nova_bold {
-  font-family: Proxima_Nova_Bold, Arial, Helvetica, sans-serif;
-}
 
 html,
 body {
@@ -30,15 +29,6 @@ body {
 a {
   text-decoration: none !important;
 }
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 4.5rem;
-}
-
-// ----------------
 
 .logo {
   &:hover {
@@ -56,12 +46,6 @@ nav {
 
 .my_container {
   padding-bottom: 4.5rem;
-}
-
-// user page
-
-.user_icon {
-  width: 150px;
 }
 
 .group_icon {
@@ -89,4 +73,11 @@ nav {
 .payment_icon {
   width: 50px;
   height: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4.5rem;
 }
