@@ -82,7 +82,6 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check the <a href="https://github.com/RICKCOYL/embeded-images-and-videos/issues"> issues page</a>.
 
-## Acknowledgment:
 
 
 ## Show your support
