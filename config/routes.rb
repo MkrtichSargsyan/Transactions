@@ -1,3 +1,12 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  resources :users do
+    resources :transactions
+  end
+  resources :groups
+  get 'new_user_transaction', to: 'users#new_user_transaction'
+  get 'user_transactions', to: 'users#user_transactions'
+  root to: 'users#show'
 end

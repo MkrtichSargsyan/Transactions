@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <%= link_to root_path  do %>
+      <div class='logo p-2 rounded-pill' style="background: rgb(33, 33, 34)">
+        <span style='color:rgb(255, 255, 255)'>S</span>
+        <span style='color:rgb(254, 251, 238)'>A</span>
+        <span style='color:rgb(253, 246, 220)'>L</span>
+        <span style='color:rgb(252, 242, 203)'>E</span>
+        <span style='color:rgb(234, 237, 206)'>D</span>
+        <span style='color:rgb(204, 233, 226)'>I</span>
+        <span style='color:rgb(104, 90, 69)'>A</span>
+      </div>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 float-right">
+        <%= show_user_name(current_user) %>
+      </ul>
+    </div>
+  </div>
+</nav>
