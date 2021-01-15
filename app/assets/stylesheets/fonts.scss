@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Proxima_Nova_Bold';
+  src: url('Proxima_Nova_Bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima_Nova_Light';
+  src: url('Proxima_Nova_Light.otf');
+}
+
+.nova_light {
+  font-family: Proxima_Nova_Light, Arial, Helvetica, sans-serif;
+}
+
+.nova_bold {
+  font-family: Proxima_Nova_Bold, Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,25 @@
+<section class='d-flex align-items-center flex-column mt-3'>
+  <p class="text-primary h1 font-weight-bold">Details</p>
+  <div class="transaction_card shadow card rounded mt-3 p-4" >
+    <div class='d-flex justify-content-center align-items-center'>
+    <%= show_transaction_icon(@transaction,'group_icon card-img-top mr-3') %>
+      <span class="transaction_title card-title h3 font-italic text-secondary"><%= @transaction.name %></span>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Amount: <span class='font-italic h4'><%= @transaction.amount %> $</span></h5>
+      <h5 class="card-text">Created by: <span class='font-italic h4'><%= @transaction.author.name %></span></h5>
+      <p>Date: <span class='font-italic'><%= @transaction.created_at.to_formatted_s(:long)  %></span></p>
+      <div>
+        <%= link_to edit_user_transaction_path(@transaction) do %>
+          <button class="btn btn-secondary">
+            Edit
+          </button>
+        <% end %>
+        <%= link_to user_transaction_path(@transaction), method: :delete do %>
+          <button class="btn btn-danger">
+            Delete
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </section>
