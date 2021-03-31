@@ -20,7 +20,7 @@ The project is an app made specially for mobiles. Users can create, edit and del
 
 ## Live Demo
 
-<a href= "https://transactions-01.herokuapp.com/" target="_blank">Live version</a>
+<a href= "https://transaction-01.herokuapp.com/" target="_blank">Live version</a>
 
 ## Getting Started
 
